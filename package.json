@@ -1,0 +1,35 @@
+{
+  "name": "fitness-app",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "3.3.7",
+    "chart.js": "^2.7.3",
+    "chartist": "0.10.1",
+    "highcharts": "^7.0.1",
+    "node-sass": "4.6.1",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "4.1.2",
+    "react": "16.2.0",
+    "react-bootstrap": "0.32.1",
+    "react-chartist": "0.13.1",
+    "react-chartjs": "^1.2.0",
+    "react-chartjs-2": "^2.7.4",
+    "react-d3-speedometer": "^0.4.2",
+    "react-dom": "16.2.0",
+    "react-jsx-highcharts": "^3.4.0",
+    "react-linechart": "^1.1.12",
+    "react-router-dom": "4.2.2",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
